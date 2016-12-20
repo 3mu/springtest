@@ -18,6 +18,7 @@ public class MainController {
     public static final String API = "api";
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
+        
         return INDEX;
     }
 
