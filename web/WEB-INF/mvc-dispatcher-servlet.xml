@@ -31,6 +31,15 @@
         <property name="prefix" value="/WEB-INF/VM/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <!--json转化-->
+    <bean id="jsonConverter" class="com.spring.test.convert.JsonConvert">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/json;charset=UTF-8</value>
+                <value>application/json;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
 
 
 </beans>
