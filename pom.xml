@@ -103,5 +103,28 @@
         <artifactId>commons-httpclient</artifactId>
         <version>3.1</version>
     </dependency>
+
+    <!--json 转化-->
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-asl</artifactId>
+        <version>1.9.11</version>
+    </dependency>
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-core-lgpl</artifactId>
+        <version>1.9.11</version>
+    </dependency>
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-asl</artifactId>
+        <version>1.9.11</version>
+    </dependency>
+    <dependency>
+        <groupId>org.codehaus.jackson</groupId>
+        <artifactId>jackson-mapper-lgpl</artifactId>
+        <version>1.9.11</version>
+    </dependency>
+
 </dependencies>
 </project>
