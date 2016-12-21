@@ -12,10 +12,8 @@ import com.spring.test.entity.*;
 @Controller
 public class MainController {
     private static final String INDEX;
-    private static final String API;
 
     static {
-        API = "api";
         INDEX = "Index";
     }
 
