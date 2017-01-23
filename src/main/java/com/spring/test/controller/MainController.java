@@ -1,10 +1,16 @@
 package com.spring.test.controller;
 
+import com.spring.test.utils.HibernateCreator;
+import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.spring.test.entity.*;
+
+import java.util.List;
+
 /**
  * Created by Administrator
  * r on 2016/12/15 0015.
@@ -26,6 +32,10 @@ public class MainController {
     @ResponseBody
     @RequestMapping(value = "/api", method = RequestMethod.GET)
     public String hello() {
+        HibernateCreator creator=new HibernateCreator("");
+        Session session=creator.GetSession();
+        NativeQuery query=session.createSQLQuery("select * from profile");
+        List<?> list= query.list();
         return "this is hello word";
     }
 

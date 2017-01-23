@@ -11,17 +11,20 @@ public class HibernateCreator {
 
     private SessionFactory sessionFactory;
 
-    public  HibernateCreator(String connetion){
+    public HibernateCreator(String connection) {
 
-        init(connetion);
+        init(connection);
     }
 
-    private void init (String connection) {
 
-        Configuration config=new Configuration();
-        config.setProperty("connection.connection_string", connection);
+    private void init(String connection) {
+
+        Configuration config = new Configuration();
+        if (connection != null && connection != "")
+            config.setProperty("connection.connection_string", connection);
+        String path = PathUtils.GetRoot(this) + "hibernate.cfg.xml";
         config.configure();
-        sessionFactory=config.buildSessionFactory();
+        sessionFactory = config.buildSessionFactory();
     }
 
     public Session GetSession() {

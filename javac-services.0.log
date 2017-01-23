@@ -1,0 +1,42 @@
+INFO	?	main	2017-01-22T07:32:15.487Z	org.javacs.JavaLanguageServer#buildClassPath	Emit classpath to C:\Users\mulin\AppData\Local\Temp\classpath6046669339791594199.txt
+SEVERE	?	main	2017-01-22T07:32:15.493Z	org.javacs.Main$4#onError	java.io.IOException: Cannot run program "null" (in directory "d:\GitWorkSpace\github\springtest"): CreateProcess error=2, 系统找不到指定的文件。
+java.lang.RuntimeException: java.io.IOException: Cannot run program "null" (in directory "d:\GitWorkSpace\github\springtest"): CreateProcess error=2, 系统找不到指定的文件。
+	at org.javacs.JavaLanguageServer.buildClassPath(JavaLanguageServer.java:593)
+	at org.javacs.JavaLanguageServer.readIfConfig(JavaLanguageServer.java:556)
+	at org.javacs.JavaLanguageServer.doFindConfig(JavaLanguageServer.java:525)
+	at org.javacs.JavaLanguageServer$$Lambda$56/1640639994.apply(Unknown Source)
+	at java.util.HashMap.computeIfAbsent(HashMap.java:1118)
+	at org.javacs.JavaLanguageServer.findConfig(JavaLanguageServer.java:517)
+	at org.javacs.JavaLanguageServer.findCompiler(JavaLanguageServer.java:477)
+	at org.javacs.JavaLanguageServer.access$600(JavaLanguageServer.java:31)
+	at org.javacs.JavaLanguageServer$2.lambda$didChangeWatchedFiles$18(JavaLanguageServer.java:374)
+	at org.javacs.JavaLanguageServer$2$$Lambda$60/1849201180.accept(Unknown Source)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.javacs.JavaLanguageServer$2.didChangeWatchedFiles(JavaLanguageServer.java:373)
+	at io.typefox.lsapi.services.transport.server.LanguageServerEndpoint._doAccept(LanguageServerEndpoint.xtend:208)
+	at io.typefox.lsapi.services.transport.server.LanguageServerEndpoint.doAccept(LanguageServerEndpoint.xtend:194)
+	at io.typefox.lsapi.services.transport.server.LanguageServerEndpoint.accept(LanguageServerEndpoint.xtend:114)
+	at io.typefox.lsapi.services.transport.server.LanguageServerEndpoint.accept(LanguageServerEndpoint.xtend)
+	at io.typefox.lsapi.services.transport.AbstractLanguageEndpoint.handleMessage(LanguageEndpoint.xtend:67)
+	at io.typefox.lsapi.services.transport.AbstractLanguageEndpoint.lambda$connect$4(LanguageEndpoint.xtend:61)
+	at io.typefox.lsapi.services.transport.AbstractLanguageEndpoint$$Lambda$51/1752203484.accept(Unknown Source)
+	at io.typefox.lsapi.services.json.StreamMessageReader$1.apply(StreamMessageReader.java:46)
+	at io.typefox.lsapi.services.json.StreamMessageReader$1.apply(StreamMessageReader.java:44)
+	at io.typefox.lsapi.services.json.StreamMessageReader.handleMessage(StreamMessageReader.xtend:128)
+	at io.typefox.lsapi.services.json.StreamMessageReader.listen(StreamMessageReader.xtend:61)
+	at io.typefox.lsapi.services.transport.AbstractLanguageEndpoint.connect(LanguageEndpoint.xtend:60)
+	at org.javacs.Main.run(Main.java:150)
+	at org.javacs.Main.main(Main.java:69)
+Caused by: java.io.IOException: Cannot run program "null" (in directory "d:\GitWorkSpace\github\springtest"): CreateProcess error=2, 系统找不到指定的文件。
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1042)
+	at java.lang.Runtime.exec(Runtime.java:620)
+	at java.lang.Runtime.exec(Runtime.java:450)
+	at org.javacs.JavaLanguageServer.buildClassPath(JavaLanguageServer.java:586)
+	... 25 more
+Caused by: java.io.IOException: CreateProcess error=2, 系统找不到指定的文件。
+	at java.lang.ProcessImpl.create(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:386)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:137)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1023)
+	... 28 more
+
