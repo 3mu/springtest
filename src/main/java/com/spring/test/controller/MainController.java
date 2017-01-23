@@ -34,9 +34,9 @@ public class MainController {
     public String hello() {
         HibernateCreator creator=new HibernateCreator("");
         Session session=creator.GetSession();
-        NativeQuery query=session.createSQLQuery("select * from profile");
-        List<?> list= query.list();
-        return "this is hello word";
+        NativeQuery query=session.createSQLQuery("select count(1) from ensecret");
+        Object list= query.getSingleResult();
+        return list.toString();
     }
 
     @ResponseBody
