@@ -11,16 +11,9 @@ public final class PathUtils {
 
     public static String GetRoot(Object object) {
         String path = object.getClass().getClassLoader().getResource("../").getPath();
-        String realpath = getRealFilePath(path);
-        realpath = realpath.substring(1);
-        return realpath;
-    }
-
-    public static String GetRootSrc(Object object) {
-        String path = object.getClass().getClassLoader().getResource("/").getPath();
-        String realpath = getRealFilePath(path);
-        realpath = realpath.substring(1);
-        return realpath;
+        String real_path = getRealFilePath(path);
+        real_path = real_path.substring(1);
+        return real_path;
     }
 
     public static String getRealFilePath(String path) {

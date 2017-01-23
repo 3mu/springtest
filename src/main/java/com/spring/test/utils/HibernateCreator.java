@@ -13,17 +13,21 @@ public class HibernateCreator {
 
     public HibernateCreator(String connection) {
 
-        init(connection);
+        init(connection, "", "");
     }
 
 
-    private void init(String connection) {
+    private void init(String connection, String username, String password) {
 
         Configuration config = new Configuration();
-        if (connection != null && connection != "")
-            config.setProperty("connection.connection_string", connection);
-        String path = PathUtils.GetRoot(this) + "hibernate.cfg.xml";
-        config.configure();
+        if (connection != null && connection != "") {
+            config.setProperty("connection.url", connection);
+            config.setProperty("connection.username", username);
+            config.setProperty("connection.password", password);
+        } else {
+            String path = PathUtils.GetRoot(this) + "hibernate.cfg.xml";
+            config.configure();
+        }
         sessionFactory = config.buildSessionFactory();
     }
 
