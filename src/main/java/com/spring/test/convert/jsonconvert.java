@@ -6,7 +6,7 @@ import org.springframework.http.converter.json.GsonHttpMessageConverter;
 /**
  * Created by Administrator on 2016/12/20 0020.
  */
-public class JsonConvert extends GsonHttpMessageConverter {
+class JsonConvert extends GsonHttpMessageConverter {
     public JsonConvert(){
         //更换Gson转换器
         super.setGson(new GsonBuilder()
